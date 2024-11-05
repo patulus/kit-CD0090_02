@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8">
+    <title>카드</title>
+  </head>
+  <body>
+    <h3>GOOD LUCK!!!</h3>
+<!--    <img th:src="@{/images/{cardRank}_of_{cardSuit}.png(cardRank=${rank}, cardSuit=${suit})}" alt="카드 이미지" width="200px" />-->
+    <img th:src="@{/images/{name}(name=${cards})}" alt="카드 이미지" width="200px" />
+  </body>
 </html>
