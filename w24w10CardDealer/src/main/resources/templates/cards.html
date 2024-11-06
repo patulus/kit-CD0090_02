@@ -8,7 +8,7 @@
     <h3>GOOD LUCK!!!</h3>
 <!--    <img th:src="@{/images/{cardRank}_of_{cardSuit}.png(cardRank=${rank}, cardSuit=${suit})}" alt="카드 이미지" width="200px" />-->
     <th:block th:each="card : ${cards}">
-      <img th:src="@{/images/{name}(name=${card.imageName})}" alt="카드 이미지" width="200px" />
+      <img th:src="@{/images/{name}(name=${card})}" alt="카드 이미지" width="200px" />
     </th:block>
   </body>
 </html>

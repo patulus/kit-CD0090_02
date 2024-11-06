@@ -13,7 +13,7 @@ class CardController(private val cardService: CardService) {
 
         val cards = cardService.getAllCards()
 
-        model.addAttribute("cards", cards)
+        model.addAttribute("cards", cards.map { it.imageName })
 //        model.addAttribute("suit", "spades")
 //        model.addAttribute("rank", "2")
         return "cards"
