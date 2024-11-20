@@ -6,6 +6,8 @@ function App() {
       <Header />
       <Playlist />
       <Container />
+      <Container2 />
+      <Container3 />
     </div>
   )
 }
@@ -31,5 +33,27 @@ const Container = () => (
     </a>
   </div>
 )
+
+function Container2() {
+  return (
+    <div className="container">
+      <a href="https://www.youtube.com/results?search_query=사건의+지평선">
+        <img src="https://picsum.photos/600/150?random=2" alt="사건의 지평선" />
+        <div className="song-title">사건의 지평선</div>
+      </a>
+    </div>
+  )
+}
+
+function Container3() {
+  return (
+    <div className="container">
+      <a href="https://www.youtube.com/results?search_query=사랑은+늘+도망가">
+        <img src="https://picsum.photos/600/150?random=3" alt="사랑은 늘 도망가" />
+        <div className="song-title">사랑은 늘 도망가</div>
+      </a>
+    </div>
+  )
+}
 
 export default App
