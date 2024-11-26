@@ -5,9 +5,9 @@ function App() {
     <div>
       <Header />
       <Playlist />
-      <Container />
-      <Container2 />
-      <Container3 />
+      <Container title="비밀번호 486" index="1" />
+      <Container title="사건의 지평선" index="2" />
+      <Container title="Supersonic" index="3" />
     </div>
   )
 }
@@ -25,35 +25,15 @@ function Playlist() {
   )
 }
 
-const Container = () => (
+// 고객의 요구가 변경될 수 있으므로 최소한으로 단기간 내 변경할 수 있어야 함
+const Container = (props) => (
   <div className="container">
-    <a href="https://www.youtube.com/results?search_query=사랑에+연습이+있었다면">
-      <img src="https://picsum.photos/600/150?random=1" alt="사랑에 연습이 있었다면" />
-      <div className="song-title">사랑에 연습이 있었다면</div>
+    <a href={`https://www.youtube.com/results?search_query=${props.title.replaceAll(" ", "+")}`}>
+    <img src={`https://picsum.photos/600/150?random=${props.index}`} alt={`랜덤 이미지 ${props.index}`} />
+      {/* <img src={`https://picsum.photos/600/150?title=${props.title}`} alt={`${props.title}`} /> */}
+      <div className="song-title">{props.title}</div>
     </a>
   </div>
 )
-
-function Container2() {
-  return (
-    <div className="container">
-      <a href="https://www.youtube.com/results?search_query=사건의+지평선">
-        <img src="https://picsum.photos/600/150?random=2" alt="사건의 지평선" />
-        <div className="song-title">사건의 지평선</div>
-      </a>
-    </div>
-  )
-}
-
-function Container3() {
-  return (
-    <div className="container">
-      <a href="https://www.youtube.com/results?search_query=사랑은+늘+도망가">
-        <img src="https://picsum.photos/600/150?random=3" alt="사랑은 늘 도망가" />
-        <div className="song-title">사랑은 늘 도망가</div>
-      </a>
-    </div>
-  )
-}
 
 export default App
