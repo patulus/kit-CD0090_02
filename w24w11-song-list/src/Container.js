@@ -22,7 +22,7 @@ const Container = (props) => {
                 </a>
                 
             </div>
-            {props.song.lyrics &&lyricsExpanded && (
+            {props.song.lyrics && lyricsExpanded && (
                 <pre className="song-lyrics" onClick={toggleLyrics}>
                     {props.song.lyrics}
                 </pre>
