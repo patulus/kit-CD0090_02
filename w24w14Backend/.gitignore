@@ -1,3 +1,5 @@
+src/main/resources/mongodb-connection.properties
+
 HELP.md
 .gradle
 build/
