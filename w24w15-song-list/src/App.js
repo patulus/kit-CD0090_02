@@ -32,13 +32,13 @@ const Header = () => (
     <h1>React 프로그래밍</h1>
 )
 
-const Playlist = (props) => {
+const Playlist = ({title, listSong}) => {
   return (
     // 자바스크립트에 class 키워드가 있어 className을 사용함
     <div className="playlist">
-      <h2>{props.title}</h2>
+      <h2>{title}</h2>
       {
-        props.listSong.map(song => (
+        listSong.map(song => (
             <Container song={song} />
           )
         )
