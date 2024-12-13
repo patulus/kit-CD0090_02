@@ -1,0 +1,117 @@
+body {
+  background: #1b2838;
+  padding: 0 10%;
+}
+
+h1 {
+  text-align: center;
+  margin: 0px;
+  padding: 30px;
+  color: #66C0F4;
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+.games {
+  background: rgba(0, 0, 0, 0.2);
+  margin: 0 1.5rem 0 1.5rem;
+  padding: 1rem 1.6rem 1.6rem 1.6rem;
+  border-radius: 10px;
+  color: #9099a0;
+  margin-top: 30px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  row-gap: 0.5rem;
+  column-gap: 0.5rem;
+}
+
+a {
+  color: white;
+}
+
+img {
+  width: 100%;
+}
+
+.game {
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.game:hover {
+  scale: 105%;
+  transition: all 0.3s ease;
+  filter: drop-shadow(2px 2px 4px black);
+  z-index: 2;
+}
+
+.game-title {
+  position: absolute;
+
+  width: 100%;
+  bottom: 5px;
+  padding: 16px 0px;
+
+  text-align: center;
+  background-color: rgba(0,0,0, 0.5);
+}
+
+.game-rating {
+  position: absolute;
+  
+  top: 5px;
+  left: 5px;
+
+  color: yellow;
+  filter: drop-shadow(2px 2px 4px black);
+}
+
+.game-description {
+  display: none;
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 3;
+}
+
+.game-description.show {
+  display: block;
+}
+
+.game-description-body {
+  position: fixed;
+
+  top: 50%;
+  left: 50%;
+
+  width: 30rem;
+  height: 20rem;
+
+  padding: 5rem;
+
+  color: #000000;
+
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.game-description-body table th {
+  text-align: center;
+}
+
+.game-description-body table td {
+  text-align: left;
+}
